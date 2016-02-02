@@ -1,5 +1,26 @@
-h1 {
-  background-color: light-grey;
-  font-family: cursive;
-  border: 2px solid green;
+#content {
+  margin: 0 2em;
+}
+
+.button {
+  width: 75px;
+  height: 25px;
+  border-radius: 10px;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.blue {
+  background-color: #39F;
+}
+
+.grey {
+  background-color: #D8D8D8;
+}
+
+.block {
+  height: 33%;
+  width: 50%;
+  border-radius: 5px;
 }
