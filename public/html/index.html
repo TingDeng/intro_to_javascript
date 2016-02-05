@@ -23,9 +23,56 @@
     <script type='text/javascript'>
       //This will hold our JavaScript code
       var contentDiv = document.getElementById('content');
-      console.log(contentDiv);
-      contentDiv.style.color="tomato";
-      contentDiv.style.fontfamily="Comic Sans MS";
+      var bodyElement = contentDiv.parentElement;
+      var contentChildren = contentDiv.children;
+      var divs=document.getElementsByTagName('div');
+      console.log(divs);
+      var blockyThings = document.getElementsByClassName('block');
+      console.log(blockyThings);
+      var greyThings = document.getElementsByClassName('grey');
+      console.log(greyThings);
+
+      //console.log(contentDiv);
+      //  console.log(bodyElement);
+        console.log(contentChildren);
+      //DOM Manipulation
+      contentDiv.style.color = "tomato";
+      contentDiv.style.fontfamily = "Comic Sans MS";
+      bodyElement.style.backgroundColor = "violet";
+      var clickyButton = document.getElementById('clicky');
+
+      //contentChildren.style.border ="thick solid #0000FF";
+      //event listener
+      //clickyButton.addEventListener('click', buttonClickHandler);
+      //contentDiv.addEventListener('mouseenter',turnBlack);
+      //contentDiv.addEventListener('mouseleave',turnOrigin);
+      //contentDiv.addEventListener('mouseenter',getBig);
+      //contentDiv.addEventListener('mouseleave',getSmall);
+      //named function
+     for(var count=0;count<=contentChildren.length-1;count=count+1){
+       contentChildren[count].addEventListener('mouseenter',turnBlack);
+       contentChildren[count].addEventListener('mouseleave',turnPurple);
+     }
+      function buttonClickHandler(){
+        alert("Hey! You clicked me!");
+      }
+      function turnBlack(){
+        bodyElement.style.backgroundColor = "black";
+      }
+      function turnPurple(){
+        bodyElement.style.backgroundColor = "purple";
+      }
+      function getBig(){
+        clickyButton.style.height = '200px';
+        clickyButton.style.width = '150px';
+      }
+      function getSmall(){
+        clickyButton.style.height = '100px';
+        clickyButton.style.width = '150px';
+      }
+      //console.log(contentDiv);
+      //contentDiv.style.color="tomato";
+      //contentDiv.style.fontfamily="Comic Sans MS";
     </script>
   </body>
 </html>
